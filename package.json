@@ -1,0 +1,23 @@
+{
+  "name": "zeus-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "program.js",
+  "scripts": {
+    "test": "jasmine-node spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.0",
+    "ddp": "^0.11.0",
+    "ddp.js": "^1.1.0",
+    "jasmine-node": "^1.14.5",
+    "jsdoc": "^3.4.0",
+    "safe": "^0.3.7",
+    "sqlite3": "^3.1.1",
+    "synchronize": "^0.9.14",
+    "tingodb": "^0.4.2",
+    "underscore": "^1.8.3"
+  }
+}
