@@ -46,7 +46,9 @@ export class Transport extends Event.EventEmitter {
         self.socket.emit(opt.channel, opt.data, cb);
 
     }
-
+    /**
+     * Register a callback with a specific event from server
+     */
     register(opt: any) {
         var self = this;
         self.socket.on(opt.eventName, opt.callback);

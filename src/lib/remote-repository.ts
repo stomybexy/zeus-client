@@ -7,7 +7,10 @@ import {Repository} from './repository';
 import {Transport} from './transport';
 import {Callback} from './common';
 
-
+/**
+ * A repository that connects to server and register to specific events.
+ * Data received is stored in the repository collection
+ */
 export class RemoteRepository extends Repository {
     name: string;
     transport: Transport;
