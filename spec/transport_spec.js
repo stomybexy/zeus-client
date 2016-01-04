@@ -51,27 +51,32 @@ describe("Transport test", function() {
     }, 20000)
 
     it('should send data to server', function(done) {
-        transport.send('hi', safe.sure(done.fail, function(res) {
+        transport.send({channel: 'data', data: 'hi'}, safe.sure(done.fail, function(res) {
             expect(res).toBe('OK')
             done()
         }))
     })
 
-    it('should register to event from server', function(done) {
+    it('should register to event from server and send acknowledgement', function(done) {
         transport.register({
             eventName: 'config',
-            callback: function(config) {
-                console.log('receiving config from server', config)
+            callback: function(config, cb) {
+                // console.log('receiving config from server', config)
+                cb(null, 'OK')
                 expect(config).toEqual({
                     _id: 1,
                     type: 'ds'
                 })
-                done()
+                // done()
             }
         })
         socket.emit('config', {
             _id: 1,
             type: 'ds'
+        }, function(err, res){
+            // console.log('Ack from client', err, res)
+            expect(res).toBe('OK')
+            done()
         })
 
     })
