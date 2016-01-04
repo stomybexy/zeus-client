@@ -13,3 +13,8 @@ results
 
 node_modules
 npm-debug.log
+coverage/
+node_modules/
+typings/
+npm-debug.log
+

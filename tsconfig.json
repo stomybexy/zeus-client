@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "outDir": "./build",
+    "preserveConstEnums": true,
+    "removeComments": true
+  },
+  "filesGlob": [
+    "src/**/*.ts"
+  ],
+  "files": [
+    "src\\greeter.ts",
+    "src\\lib\\common.ts",
+    "src\\lib\\db.ts",
+    "src\\lib\\remote-repository.ts",
+    "src\\lib\\repository.ts",
+    "src\\lib\\transport.ts"
+  ]
+}
